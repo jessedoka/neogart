@@ -23,7 +23,7 @@ def main():
         i = 0 
         current_time = datetime.now().strftime("%H:%M:%S")
         print(current_time)
-        if current_time == "20:16:00":
+        if current_time == "20:21:00":
             i += 1
             for _ in range(0, GIT_DICT[gl_image[i]]):
                 commit()
