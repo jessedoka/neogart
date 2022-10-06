@@ -1,3 +1,3 @@
-git commit dummy.txt
+git add dummy.txt
 git commit -m "DUMMYRAND"
 git push origin master
