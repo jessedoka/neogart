@@ -7,7 +7,7 @@ import time
 
 def commit():
     file = open("dummy.txt", "a")
-    file.write(" ".join([random.choice(["This", "is", "a", "work", "of", "Art"]) for i in range(0, 10)]))
+    file.write(" \n".join([random.choice(["This", "is", "a", "work", "of", "Art"]) for i in range(0, 10)]))
     file.close()
 
     subprocess.run("./commit.sh", shell=True, check=True, timeout=1000)
