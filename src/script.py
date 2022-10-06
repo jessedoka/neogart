@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 import random
 from gl_image import identicon
+import time
 
 def commit():
     file = open("dummy.txt", "a")
@@ -21,13 +22,17 @@ def main():
     }
 
     gl_image = identicon().replace("\n", "")
-
-    for i in range(len(gl_image) - 1):
+    i = 0
+    while True:
         current_time = datetime.now().strftime("%H:%M:%S")
-        print(f"{current_time} - {i} - {gl_image[i]} - {GIT_DICT[gl_image[i]]}")
-        if current_time == "20:26:00":
-            for _ in range(0, GIT_DICT[gl_image[i]]):
-                commit()
+        if current_time == "22:20:50":
+            if i >= len(gl_image) - 1:
+                i = 0
+            else:
+                i += 1
+                for _ in range(0, GIT_DICT[gl_image[i]]):
+                    commit()
+
         
 
 if __name__ == '__main__':

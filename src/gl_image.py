@@ -1,4 +1,3 @@
-import PIL.Image
 from argparse import ArgumentParser
 from github.identicon import Identicon
 from random import randint
